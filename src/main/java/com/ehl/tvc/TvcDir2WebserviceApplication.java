@@ -13,7 +13,7 @@ import de.codecentric.boot.admin.config.EnableAdminServer;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableAdminServer
+@EnableAdminServer 
 public class TvcDir2WebserviceApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(TvcDir2WebserviceApplication.class, args);
