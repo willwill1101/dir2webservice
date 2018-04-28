@@ -1,0 +1,36 @@
+server:
+  #应用程序端口号,避免冲突即可
+  port: 8888
+info:
+  version: 1.0.0
+  info: dir2webservice
+logging.config: classpath:config/logback.xml
+
+banner:
+  #欢迎界面,默认
+  location: config/welcome.ehl
+spring:
+  application:
+    #应用程序名称,默认
+    name: TVC_DIR2WEBSERVICE
+    admin:
+      enabled: true
+  cloud:
+    zookeeper:
+      #启用ZK注册中心,默认
+      enabled: true
+      #ZK地址
+      connect-string: host244.ehl.com:2181,host245.ehl.com:2181,host246.ehl.com:2181
+      discovery:
+        #是否注册到ZK,如使用监控特性true不使用false
+        register: true
+  #ORACLE数据库
+  datasource:
+    url: jdbc:mysql://10.150.27.223:3306/EHL_ANALYSIS?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+management:
+  security:
+    #服务安全,默认
+    enabled: false
